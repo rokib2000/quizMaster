@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 
 const Question = (props) => {
-  //   console.log(props.question);
-  //   const [btn, setBtn] = useState();
-  //   const [btn, setBtn] = useState();
-  const { question, options, correctAnswer, id } = props.question;
-  let btn = "";
+  const [isCorrect, setCorrect] = useState(false);
+  const [isWrong, setWrong] = useState(false);
+  const { question, options, correctAnswer } = props.question;
+
   const clickHandler = (selectAnswer) => {
     console.log(selectAnswer);
+    console.log(correctAnswer);
     const isCorrectAnswer = selectAnswer === correctAnswer;
     const isWrongAnswer = selectAnswer !== correctAnswer;
-    btn = isCorrectAnswer ? "block" : "none";
-    // const wrongAnswerClass = isWrongAnswer ? "wrong-answer" : "";
-    // const disabledClass = currentAnswer ? "disabled-answer" : "";
+    if (isCorrectAnswer) {
+      setCorrect(true);
+    } else {
+      setCorrect(false);
+    }
+    if (isWrongAnswer) {
+      setWrong(true);
+    } else {
+      setWrong(false);
+    }
   };
 
   return (
@@ -33,8 +40,11 @@ const Question = (props) => {
           </button>
         ))}
       </div>
-      <div className="alert alert-success d-none" style={{ display: btn }} role="alert">
-        A simple success alert—check it out!
+      <div className={`alert alert-success mt-3 ${isCorrect ? "d-block" : "d-none"}`} role="alert">
+        Correct Answer!
+      </div>
+      <div className={`alert alert-danger mt-3 ${isWrong ? "d-block" : "d-none"}`} role="alert">
+        Wrong Answer!
       </div>
     </div>
   );
