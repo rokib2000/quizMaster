@@ -3,10 +3,11 @@ import React, { useState } from "react";
 const Question = (props) => {
   const [isCorrect, setCorrect] = useState(false);
   const [isWrong, setWrong] = useState(false);
+  const [isClick, setClick] = useState(false);
   const { question, options, correctAnswer } = props.question;
 
   const clickHandler = (selectAnswer) => {
-    console.log(selectAnswer);
+    // console.log(selectAnswer);
     console.log(correctAnswer);
     const isCorrectAnswer = selectAnswer === correctAnswer;
     const isWrongAnswer = selectAnswer !== correctAnswer;
@@ -20,6 +21,8 @@ const Question = (props) => {
     } else {
       setWrong(false);
     }
+
+    setClick(true);
   };
 
   return (
@@ -32,7 +35,7 @@ const Question = (props) => {
           <button
             type="button"
             // style={{ background: btn }}
-            className="btn btn-light mt-2 btn-block w-100"
+            className={`btn btn-light mt-2 btn-block w-100 ${isClick ? "disabled" : ""}`}
             onClick={() => clickHandler(option)}
             key={option}
           >
