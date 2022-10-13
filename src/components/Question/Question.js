@@ -35,7 +35,11 @@ const Question = (props) => {
     <div className="my-5 border p-3 rounded">
       <div className="d-flex justify-content-between">
         <h5>{question.slice(3, -4)}</h5>
-        <button type="button" className="btn btn-primary" onClick={() => showCorrectAnswer(correctAnswer)}>
+        <button
+          type="button"
+          className={`btn btn-primary ${isClick ? "" : "disabled"}`}
+          onClick={() => showCorrectAnswer(correctAnswer)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -68,7 +72,7 @@ const Question = (props) => {
         Wrong Answer!
       </div>
       <div className={`alert alert-primary mt-3 ${isShow ? "d-block" : "d-none"}`} role="alert">
-        {isShow ? correctAnswer : ""}
+        {isShow ? `Correct Answer: ${correctAnswer}` : ""}
       </div>
     </div>
   );
