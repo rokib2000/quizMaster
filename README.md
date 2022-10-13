@@ -1,5 +1,18 @@
 # Project Details
 
+Project name: **quiz Master**
+live Website: [quizMater](https://quizmaster1.netlify.app/)
+
+## Technologies
+
+---
+
+A list of technologies used within the project:
+
+- [React](https://reactjs.org/): Version 18.2.0
+- [Bootstrap](https://react-bootstrap.github.io/): Version 5.2.5
+- [Rechart](https://recharts.org/): Version 2.1.15
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
