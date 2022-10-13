@@ -1,11 +1,11 @@
 # Project Details
 
-Project name: **quiz Master**
-live Website: [quizMater](https://quizmaster1.netlify.app/)
-
-## Technologies
+Project name: **quiz Master**.
+live Website: [quizMater](https://quizmaster1.netlify.app/).
 
 ---
+
+## Technologies
 
 A list of technologies used within the project:
 
