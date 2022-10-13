@@ -1,7 +1,7 @@
 # Project Details
 
-Project name: **quiz Master**.
-live Website: [quizMater](https://quizmaster1.netlify.app/).
+> Project name: **quiz Master**.
+> live Website: [quizMater](https://quizmaster1.netlify.app/).
 
 ---
 
